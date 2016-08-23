@@ -1,0 +1,280 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="shortcut icon" href="images/car-icon2.png">
+    <meta id="meta" name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/trygetspot.css" type="text/css" />
+    <title></title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-lg-6 col-md-6 col-sm-6 col-lg-offset-3 col-md-offset-3 col-sm-offset-3">
+
+                <div class="card hovercard" style="padding-bottom:20px;">
+                    <div class="cardheader-profile">
+
+                    </div>
+                    <!--<div class="spot">
+                        <button class="btn btn-lg btn-primary btn-block btn-spot">30</button>
+                    </div>-->
+                    <div class="avatar">
+                        <img alt="" style="visibility: hidden;" src="images/avatar_2x.png" id="profile-loaded"> <!--Make this CHANGE-->
+                        
+                    </div>
+
+                    <div class="bottom">
+                        <h2>Profile</h2>
+
+                        <div class="desc">Your Rating:</div>
+                        <table class="table table-striped">
+                            <tr>
+                                <td>
+                                    Spots Held
+                                </td>
+                                <td>
+                                    30
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Spots Received</td>
+                                <td>20</td>
+                            </tr>
+                            <tr>
+                                <td>Problems Against</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>Problems Filed</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>Percentage</td>
+                                <td>---%</td>
+                            </tr>
+                        </table>
+
+                
+                        <div class="desc" style="margin-top: 15px;">Your vehicles:</div>
+                        <div class="desc" style="font-size: 10px;">Click one of the three vehicle panels to add or update a vehicle.</div>
+
+                            <a href="#update-car" data-toggle="collapse">
+                                <div class="spotcontain box-shadow--4dp" style="overflow:auto;">
+                                    <div class="viewpoint">
+                                        <img style="visibility: hidden; position: absolute;" src="images/arena.jpg" id="div1" />
+
+                                    </div>
+                                    <div class="spotbody">
+                                        <p>Color: Blue</p>
+                                        <p>Make: Honda</p>
+                                        <p>Model: Civic</p>
+                                        <p>Year: 2013</p>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <div class="collapse" id="update-car" style="border: 1px solid black; padding: 10px; background-color: #FFFFFF">
+                                <form class="form-register" method="post" action="carphp.php" autocomplete="on">
+                                    <script src="edmund.js"></script>
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-bottom:5px; padding: 0px;"><div class="desc">Make</div></div>
+                                    <div class="form-group"><select id=Make name="Make" class="form-control" required> </select></div>
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-bottom:5px; padding: 0px;"><div class="desc">Model</div></div>
+                                    <div class="form-group"><select id=Model name="Model" class="form-control" required> </select></div>
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-bottom:5px; padding: 0px;"><div class="desc">Year</div></div>
+                                    <div class="form-group"><select id=Year name="Year" class="form-control" required> </select></div>
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-bottom:5px; padding: 0px;"><div class="desc">Color</div></div>
+                                    <div class="form-group">
+                                        <select id=Color name="Color" class="form-control" required>
+                                            <option value="Blank">  </option>
+                                            <option value="White"> White </option>
+                                            <option value="Black"> Black </option>
+                                            <option value="Silver"> Silver </option>
+                                            <option value="Gray"> Gray </option>
+                                            <option value="Red"> Red </option>
+                                            <option value="Blue"> Blue </option>
+                                            <option value="Brown"> Brown </option>
+                                            <option value="Beige"> Beige </option>
+                                            <option value="Yellow/Gold"> Yellow/Gold </option>
+                                            <option value="Green"> Green </option>
+                                            <option value="Orange"> Orange </option>
+                                            <option value="Purple"> Purple </option>
+                                        </select>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-bottom:5px; padding: 0px;"><div class="desc">Upload Image Of This Car (OPTIONAL)</div></div>
+                                    <div class="form-group"><input id=Input type="file" style="width: 100%;" /></div>
+
+                                    <button class="btn btn-lg btn-primary btn-block btn-find" style="background-color: RGB(49,103,157); " type="submit" id="Submit">Update Vehicle</button>
+
+                                </form>
+                            </div>
+
+                        <!--This will need to be inserted onto the page if the user has less than 3 cars-->
+                        <div id="less-than-three" style="margin-top: 10px; width:100%;">
+                            <button class="btn btn-lg btn-primary btn-block btn-find" type="submit" id="Submit" onclick="location.href='excarreg.php'">Register New Car</button>
+                        </div>
+
+                        <hr />
+
+
+                        <div class="desc" style="margin-top: 15px;">Update/Change profile image:</div>
+                        <div>
+                            <form class="form-register" method="post" autocomplete="on">
+                                <div class="form-group"><input id=Input type="file" style="width: 100%;" /></div>
+
+                                <button class="btn btn-lg btn-primary btn-block btn-find" type="submit" id="Submit">Upload Image</button>
+
+                            </form>
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+    function addLoadEvent(func) {
+    var oldonload = window.onload;
+    if (typeof window.onload != 'function') {
+    window.onload = func;
+    } else {
+    window.onload = function() {
+    if (oldonload) {
+    oldonload();
+    }
+    func();
+    }
+    }
+    }
+    addLoadEvent(function () {
+        var theImg = document.getElementById('profile-loaded');
+        if (theImg.width > theImg.height) {
+            theImg.height = 150;
+            var tempWidth = theImg.width;
+            var middle = tempWidth / 2;
+            var toLeft = middle - 75;
+            document.getElementById("profile-loaded").style.right = "-" + toLeft + "px";
+            document.getElementById("profile-loaded").style.visibility = "visible";
+
+        }
+        else if (theImg.width < theImg.height) {
+            theImg.width = 150;
+            var tempHeight = theImg.height;
+            var middle = tempHeight / 2;
+            var toTop = middle - 75;
+            document.getElementById("profile-loaded").style.top = "-" + toTop + "px";
+            document.getElementById("profile-loaded").style.left = "-4px";
+            document.getElementById("profile-loaded").style.visibility = "visible";
+        }
+        else {
+            document.getElementById("profile-loaded").style.width = "150px";
+            document.getElementById("profile-loaded").style.height = "150px";
+            document.getElementById("profile-loaded").style.left = "-4px";
+            document.getElementById("profile-loaded").style.visibility = "visible";
+        }
+    });
+    addLoadEvent(function () {
+        if (document.getElementById('div1') != null) {
+            var theImg = document.getElementById('div1');
+            if (theImg.width > theImg.height) {
+                theImg.height = 100;
+                var tempWidth = theImg.width;
+                var middle = tempWidth / 2.0;
+                var toLeft = middle - 50;
+                document.getElementById("div1").style.right = "-" + toLeft + "px";
+                document.getElementById("div1").style.top = "-4px";
+                document.getElementById("div1").style.visibility = "visible";
+
+            }
+            else if (theImg.width < theImg.height) {
+                theImg.width = 100;
+                var tempHeight = theImg.height;
+                var middle = tempHeight / 2;
+                var toTop = middle - 75;
+                document.getElementById("div1").style.top = "-" + toTop + "px";
+                document.getElementById("div1").style.left = "-4px";
+                document.getElementById("div1").style.visibility = "visible";
+            }
+            else {
+                document.getElementById("div1").style.width = "100px";
+                document.getElementById("div1").style.height = "100px";
+                document.getElementById("div1").style.left = "-4px";
+                document.getElementById("div1").style.visibility = "visible";
+            }
+        }
+    });
+    addLoadEvent(function () {
+        if (document.getElementById('div2') != null) {
+            var theImg = document.getElementById('div2');
+            if (theImg.width > theImg.height) {
+                theImg.height = 100;
+                var tempWidth = theImg.width;
+                var middle = tempWidth / 2.0;
+                var toLeft = middle - 50;
+                document.getElementById("div2").style.right = "-" + toLeft + "px";
+                document.getElementById("div2").style.top = "-4px";
+                document.getElementById("div2").style.visibility = "visible";
+
+            }
+            else if (theImg.width < theImg.height) {
+                theImg.width = 100;
+                var tempHeight = theImg.height;
+                var middle = tempHeight / 2;
+                var toTop = middle - 75;
+                document.getElementById("div2").style.top = "-" + toTop + "px";
+                document.getElementById("div2").style.left = "-4px";
+                document.getElementById("div2").style.visibility = "visible";
+            }
+            else {
+                document.getElementById("div2").style.width = "100px";
+                document.getElementById("div2").style.height = "100px";
+                document.getElementById("div2").style.left = "-4px";
+                document.getElementById("div2").style.visibility = "visible";
+            }
+        }
+    });
+    addLoadEvent(function () {
+        if (document.getElementById('div3') != null) {
+            var theImg = document.getElementById('div3');
+            if (theImg.width > theImg.height) {
+                theImg.height = 100;
+                var tempWidth = theImg.width;
+                var middle = tempWidth / 2.0;
+                var toLeft = middle - 50;
+                document.getElementById("div3").style.right = "-" + toLeft + "px";
+                document.getElementById("div3").style.top = "-4px";
+                document.getElementById("div3").style.visibility = "visible";
+
+            }
+            else if (theImg.width < theImg.height) {
+                theImg.width = 100;
+                var tempHeight = theImg.height;
+                var middle = tempHeight / 2;
+                var toTop = middle - 75;
+                document.getElementById("div3").style.top = "-" + toTop + "px";
+                document.getElementById("div3").style.left = "-4px";
+                document.getElementById("div3").style.visibility = "visible";
+            }
+            else {
+                document.getElementById("div3").style.width = "100px";
+                document.getElementById("div3").style.height = "100px";
+                document.getElementById("div3").style.left = "-4px";
+                document.getElementById("div3").style.visibility = "visible";
+            }
+        }
+    });
+        </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<title>Profile Page</title>
+</head>
+<body>
+	
+	<form method = "post" action = "carphp.php" autocomplete = "on">  
+	
+	<script src="edmund.js"></script>
+	
+	<h2> Troy Parking Profile Page </h2></br>
+	
+	
+	
+	
+	<input id=Input type = "file"> </input></br></br>
+	
+	
+	<div>
+		<label>If you would like to register your car now, you can use the drop-down menu below to choose your car's make/model/year/color.</label>
+	</div>	
+	
+	<p>
+	<label>Please choose the car Make first, then choose the car Model, then choose the car Year and Color.</label></br></br>
+	<label><strong>Make: </strong><select id=Make name = "Make" required> </select></label>
+	<label><strong>Model: </strong><select id=Model name = "Model" required> </select></label>
+	<label><strong>Year: </strong><select id=Year name = "Year" required> </select></label>
+	<label><strong>Color: </strong><select id=Color name="Color" required>
+		<option value = "Blank">  </option>
+		<option value = "White"> White </option>
+		<option value = "Black"> Black </option>
+		<option value = "Silver"> Silver </option>
+		<option value = "Gray"> Gray </option>
+		<option value = "Red"> Red </option>
+		<option value = "Blue"> Blue </option>
+		<option value = "Brown"> Brown </option>
+		<option value = "Beige"> Beige </option>
+		<option value = "Yellow/Gold"> Yellow/Gold </option>
+		<option value = "Green"> Green </option>
+		<option value = "Orange"> Orange </option>
+		<option value = "Purple"> Purple </option>
+	</select></label>
+	</p>
+	
+	<p>
+		<label name = "Email" style='display:none;'></label>
+	</p>
+	
+	<p>
+		<input type = "submit" value = "Register" style="width:125px; height:25px;" id="Submit" />
+	</p>
+	
+</form>	
+</body>
+</html>
